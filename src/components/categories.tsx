@@ -1,9 +1,8 @@
-import Link from 'next/link';
-import { badgeVariants } from './ui/badge';
 import { getPostsMeta } from '@/lib/posts';
-import { Meta } from '../../types';
-import { ScrollArea, ScrollBar } from './ui/scroll-area';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { Meta } from '../../types';
+import { badgeVariants } from './ui/badge';
 
 interface CategoriesProps {
   posts: Meta[] | undefined;

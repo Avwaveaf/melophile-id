@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Icons } from './icons';
-import { siteConfig } from '../../config/site';
 import { GiCircuitry } from 'react-icons/gi';
+import { siteConfig } from '../../config/site';
+import { Icons } from './icons';
 
 export default function Footer() {
   return (

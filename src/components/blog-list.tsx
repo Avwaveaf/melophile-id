@@ -1,8 +1,6 @@
-import React from 'react';
-import BlogCard from './blog-card';
-import { getPostsMeta } from '@/lib/posts';
-import { Separator } from './ui/separator';
 import { Meta } from '../../types';
+import BlogCard from './blog-card';
+import { Separator } from './ui/separator';
 
 export default async function BlogList({
   posts,

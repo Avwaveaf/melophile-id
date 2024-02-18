@@ -1,12 +1,12 @@
+import Footer from '@/components/footer';
+import { MainNav } from '@/components/main-nav';
+import { ThemeProvider } from '@/components/theme-provider';
+import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { MainNav } from '@/components/main-nav';
 import { landingConfig } from '../../config/landing';
-import { cn } from '@/lib/utils';
 import { siteConfig } from '../../config/site';
-import Footer from '@/components/footer';
+import './globals.css';
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['300', '400', '700'] });
 

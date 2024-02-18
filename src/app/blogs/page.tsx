@@ -7,9 +7,11 @@ import { getPostsMeta } from '@/lib/posts';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { GiCircuitry } from 'react-icons/gi';
 import { SiMusicbrainz } from 'react-icons/si';
 import { blogConfig } from '../../../config/blog';
+import BlogsLoading from './loading';
 
 export const metadata: Metadata = {
   title: blogConfig.name,
@@ -57,8 +59,10 @@ export default async function Blogs({
         </div>
       </div>
       <div id='blog-list'>
-        <Categories posts={posts} />
-        <BlogList posts={entries} />
+        <Suspense fallback={<BlogsLoading />}>
+          <Categories posts={posts} />
+          <BlogList posts={entries} />
+        </Suspense>
       </div>
       <Separator />
       <PaginationControls

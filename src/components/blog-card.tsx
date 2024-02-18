@@ -1,12 +1,10 @@
-import Image from 'next/image';
-import { Card, CardTitle, CardDescription, CardContent } from './ui/card';
+import getFormattedDate from '@/lib/getFormattedDate';
+import { cn } from '@/lib/utils';
+import { BookAudio } from 'lucide-react';
 import Link from 'next/link';
 import { Meta } from '../../types';
-import getFormattedDate from '@/lib/getFormattedDate';
-import { FaCircle, FaMusic } from 'react-icons/fa';
 import { Badge } from './ui/badge';
-import { cn } from '@/lib/utils';
-import { BookAudio, GripVertical, LucideQrCode } from 'lucide-react';
+import { Card } from './ui/card';
 
 type Props = {
   post: Meta;
@@ -30,13 +28,6 @@ export default function BlogCard({ post, isFirst, readingTime }: Props) {
 
       <Link href={`/blogs/${id}`}>
         <Card className='min-h-[170px]  flex rounded-none bg-transparent hover:bg-primary/10 dark:hover:bg-primary-foreground/10  py-4 border-b-2 border-b-primary-foreground hover:border-b-primary'>
-          {/* <Image
-            src='https://picsum.photos/500'
-            alt={''}
-            className='rounded-t-lg mx-auto'
-            width={500}
-            height={500}
-          /> */}
           <div className='w-full px-4 border-l text-lg gap-5 flex flex-col self-end'>
             <Badge className={cn('w-fit', isFirst ? 'block' : 'hidden')}>
               Latest

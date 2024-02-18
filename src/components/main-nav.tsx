@@ -1,12 +1,12 @@
 'use client';
 
-import * as React from 'react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
+import * as React from 'react';
 
-import { cn } from '@/lib/utils';
 import { Icons } from '@/components/icons';
 import { MobileNav } from '@/components/mobile-nav';
+import { cn } from '@/lib/utils';
 import { MainNavItem, siteConfig } from '../../config/site';
 import { ModeToggle } from './mode-toggle';
 

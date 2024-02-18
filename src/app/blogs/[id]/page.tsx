@@ -2,10 +2,10 @@ import { badgeVariants } from '@/components/ui/badge';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import getFormattedDate from '@/lib/getFormattedDate';
 import { getPostByName, getPostsMeta } from '@/lib/posts';
+import 'highlight.js/styles/devibeans.css';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { FaBackward } from 'react-icons/fa';
-import 'highlight.js/styles/devibeans.css';
 
 export const revalidate = 86400;
 

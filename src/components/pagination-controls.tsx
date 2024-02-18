@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { FC, useEffect } from 'react';
 import { buttonVariants } from './ui/button';
 
 interface PaginationControlsProps {

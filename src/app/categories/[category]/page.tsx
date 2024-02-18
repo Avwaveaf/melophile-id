@@ -1,6 +1,6 @@
+import BlogCard from '@/components/blog-card';
 import { getPostsMeta } from '@/lib/posts';
 import Link from 'next/link';
-import BlogCard from '@/components/blog-card';
 
 export const revalidate = 86400;
 
