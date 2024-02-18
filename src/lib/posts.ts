@@ -7,6 +7,7 @@ import { Pluggable } from "unified";
 import Video from "../components/video";
 import CustomImage from "../components/custom-image";
 import { getEstimatedReadTime } from "./getEstimatedReadTime";
+import remarkGfm from "remark-gfm";
 
 type FileTree = {
   tree: [
@@ -47,8 +48,10 @@ export async function getPostByName(
       CustomImage,
     },
     options: {
+    
       parseFrontmatter: true,
       mdxOptions: {
+        remarkPlugins: [remarkGfm],
         rehypePlugins: [
           rehypeHighlight,
           rehypeSlug,
