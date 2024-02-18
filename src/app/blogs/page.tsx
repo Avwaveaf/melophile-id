@@ -24,7 +24,7 @@ export default async function Blogs({
   const posts = await getPostsMeta();
 
   const page = Number(searchParams['page']) || 1;
-  const per_page = Number(searchParams['per_page']) || 5;
+  const per_page = Number(searchParams['per_page']) || 10;
 
   const start = (page - 1) * per_page; // 0, 5, 10 ...
   const end = start + per_page; // 5, 10, 15 ...
